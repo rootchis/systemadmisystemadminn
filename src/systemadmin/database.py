@@ -1,17 +1,13 @@
 import sqlite3
 from sqlite3 import Error
 
-import pandas as pd
+#import pandas as pd
 
 
-class Database:
 
+class Databaz:
     def __init__(self):
         print(f"Runnning Database with sqlite: {sqlite3.version}")
-
-    #        self.database = database
-    #        self.table = table
-    #        self.connection = sqlite3.connect(database)
 
     def select(self, table):
         self.connection.execute(f"SELECT * FROM {table}")
@@ -22,8 +18,6 @@ class Database:
 
     def createdb(self, dbfile, table):
         table = table
-        """ create a database connection to a SQLite database """
-
         conn = None
         try:
             conn = sqlite3.connect(dbfile)
@@ -33,6 +27,7 @@ class Database:
             if conn:
                 conn.close()
 
+    dbz = Databaz()
 
-db = Database()
-db.createdb("../../tests/resources/db/pythonsqlite.db", "")
+    dbz.createdb("../../tests/resources/db/pythonsqlite.db", "")
+
