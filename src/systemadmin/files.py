@@ -1,5 +1,7 @@
 #File: standard files or directories
 import os
+import sqlite3
+
 
 class File:
     def __init__(self, path):
