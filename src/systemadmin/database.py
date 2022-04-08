@@ -35,6 +35,8 @@ sql_create_projects_table = """ CREATE TABLE IF NOT EXISTS projects (
                                         end_date text
                                     ); """
 
+#Test
+
 sql_create_tasks_table = """CREATE TABLE IF NOT EXISTS tasks (
                                     id integer PRIMARY KEY,
                                     name text NOT NULL,
